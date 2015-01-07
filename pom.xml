@@ -13,46 +13,19 @@
         </excludes>
       </resource>
     </resources>
-     <testResources>
-      <testResource>
-        <directory>target/test-classes</directory>
-      </testResource>
-    </testResources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
-        <executions>
-              <execution>
-                <id>attach-sources</id>
-                <goals>
-                  <goal>compile</goal>
-                </goals>
-              </execution>
-            </executions>
         <configuration>
           <source>1.7</source>
           <target>1.7</target>
+          <goals>
+                  <goal>package</goal>
+          </goals>
         </configuration>
       </plugin>
-      	  <plugin>
-            <inherited>true</inherited>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-             <version>2.4</version>
-            <executions>
-              <execution>
-                <id>attach-sources</id>
-                <goals>
-                  <goal>jar</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
+      	  
     </plugins>
-  
   </build>
-   <reporting>
-    <outputDirectory>target</outputDirectory>
-  </reporting>
 </project>
